@@ -1,7 +1,7 @@
 # HIT137-Assignment3
 HIT137 Assignment 3: Tkinter and OpenCV image puzzle game.
 
-This is the description of the assignment for HIT137.This is the description of HIT137 Assignment 3.
+This is the description of the assignment for HIT137.
 
 A Puzzle game that is created, using Tkinter and OpenCV, in object-oriented Python for desktop.
 A picture (or image) is cut into a grid of tiles and then scrambled with random swaps and rotations.
