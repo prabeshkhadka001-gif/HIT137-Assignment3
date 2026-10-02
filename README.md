@@ -1,6 +1,14 @@
 # HIT137-Assignment3
 HIT137 Assignment 3: Tkinter and OpenCV image puzzle game.
 
+## Group members
+
+| Name | Student ID | GitHub |
+|---|---|---|
+| Parivesh Khadka Chhetri | s398438 | prabeshkhadka001-gif |
+| Pawan Koirala | s408952| Purshottam285 |
+| Noel karunathilake| s389821| noelmaskym |
+
 This is the description of the assignment for HIT137.
 
 A desktop puzzle game built with Tkinter and OpenCV in object-oriented Python. A picture is cut into a grid of tiles and scrambled with random swaps, rotations and flips. The player restores it by clicking the tiles: left-click to select and swap, right-click to rotate, and Shift + left-click to flip.
