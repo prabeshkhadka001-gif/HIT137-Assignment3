@@ -1,7 +1,7 @@
-# HIT137-Assignment3
+HIT137-Assignment3
 HIT137 Assignment 3: Tkinter and OpenCV image puzzle game.
 
-## Group members
+Group members
 
 | Name | Student ID | GitHub |
 |---|---|---|
@@ -14,7 +14,7 @@ This is the description of the assignment for HIT137.
 A desktop puzzle game built with Tkinter and OpenCV in object-oriented Python. A picture is cut into a grid of tiles and scrambled with random swaps, rotations and flips. The player restores it by clicking the tiles: left-click to select and swap, right-click to rotate, and Shift + left-click to flip.
 
 
-## How to run
+ How to run
 
 ```bash
 pip install -r requirements.txt
@@ -30,7 +30,7 @@ Use the unit tests with:
 python -m unittest discover tests -v
 ```
 
-## How to play
+How to play
 
 1. Choose a grid size (3 x 3, 4 x 4 or 5 x 5), a difficulty and a fit mode.
 2. Click on Load Image... and select a JPG, PNG or BMP file.
@@ -56,7 +56,7 @@ New Shuffle re-scrambles the current image against the current settings.
 Once the image has been restored, the player is informed, the puzzle is locked and another image is shown.
   can be loaded.
 
-## Project structure
+Project structure
 
 ```
 main.py                    Entry point
@@ -126,7 +126,7 @@ Fit modes (crop or pad)
 To play the same picture again with a different scramble use the *New Shuffle* function.
 * **Unit tests** that test orientation maths, scramble rules, hints, solve and image loading.
 
-## Known limitation
+Known limitation
 
 Tiles that are a single flat colour (for example the bars added in Pad mode) look the same
 During all orientations, so they can be able to turn their heads to the right without a tick. The Hint button will indicate these.
