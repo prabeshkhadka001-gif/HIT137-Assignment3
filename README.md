@@ -1,7 +1,7 @@
-# HIT137-Assignment3
+ HIT137-Assignment3
 HIT137 Assignment 3: Tkinter and OpenCV image puzzle game.
 
-## Group members
+ Group members
 
 | Name | Student ID | GitHub |
 |---|---|---|
@@ -14,7 +14,7 @@ This is the description of the assignment for HIT137.
 A desktop puzzle game built with Tkinter and OpenCV in object-oriented Python. A picture is cut into a grid of tiles and scrambled with random swaps, rotations and flips. The player restores it by clicking the tiles: left-click to select and swap, right-click to rotate, and Shift + left-click to flip.
 
 
-## How to run
+ How to run
 
 ```bash
 pip install -r requirements.txt
@@ -30,7 +30,7 @@ Use the unit tests with:
 python -m unittest discover tests -v
 ```
 
-## How to play
+ How to play
 
 1. Choose a grid size (3 x 3, 4 x 4 or 5 x 5), a difficulty and a fit mode.
 2. Click on Load Image... and select a JPG, PNG or BMP file.
@@ -56,7 +56,7 @@ New Shuffle re-scrambles the current image against the current settings.
 Once the image has been restored, the player is informed, the puzzle is locked and another image is shown.
   can be loaded.
 
-## Project structure
+ Project structure
 
 ```
 main.py                    Entry point
@@ -73,9 +73,9 @@ sample_images/             Test images in JPG, PNG and BMP
 outputs/                   Screenshots of the running application
 ```
 
-## How the requirements are met
+ How the requirements are met
 
-### Object-oriented programming
+ Object-oriented programming
 
 | Concept | Where |
 |---|---|
@@ -86,7 +86,7 @@ All of the classes will communicate with each other in the following way: `Puzzl
 Inheritance: `SwapTransformation`, `RotateTransformation`, `FlipTransformation` are abstract classes of the class `Transformation`, as are `EasyDifficulty`, `NormalDifficulty` and `HardDifficulty` which are children of the class `Difficulty`, and `OriginalCanvas`, `BoardCanvas` are children of the class `ImageCanvas`, which are children of the class `tk.Canvas`, which are children of the class `Exception`. |
 PuzzleGame.solve() called without checking the types of the elements in a mixed list.PuzzleGame.solve() called undo(), without checking the type of the elements in a mixed list. Each subclass of ImageCanvas overrides draw_overlays(), which is called by the player's movements when the player calls ImageCanvas.redraw(). The game inquires about `transformation_count()` and `time_limit()` from any `Difficulty` object.
 
-### Image processing (OpenCV)
+ Image processing (OpenCV)
 
 * Files are loaded using `np.fromfile` + `cv2.imdecode` (on non-English paths as well)
   Windows). Supported formats are .jpg file, .png file and .bmp file – any other file type will display a file error message box.
@@ -100,14 +100,14 @@ All the scramble is generated at once and applied. It is always possible to cons
 After each action, the tiles are reconnected to make a single picture using `np.hstack` /
   `np.vstack` and redisplayed.
 
-### Orientation tracking
+ Orientation tracking
 
 Each tile contains the information of rotation by a quarter turn clockwise and the horizontal flip. The
 rotate and flip methods update these with precise rules, so the game is always aware if a number of them has been rotated and/or flipped.
 tile is not tilted and looks at no pixels. A tile is in its home position when it is in correct position.
 and upright. This state must always be equal to what the unit tests (which are based on actual pixels).
 
-### Error handling
+ Error handling
 
 The file dialog will not respond if it is cancelled.
 If you find non-image, unsupported, damaged or missing files, they display a message box: the app continues running.
@@ -115,7 +115,7 @@ Clicking outside the puzzle image, the original image, and after the puzzle.
   Completed istructures are not considered.
 Any unexpected error that occurs when preparing an image is detected and displayed in a message box.
 
-## Extra features
+ Extra features
 - Hard (slightly more complex), Extremely Hard (moderately more complex), and
   Hard (standard transformations + countdown 8 seconds per tile; when time is up)
   the puzzle locks).
@@ -126,7 +126,7 @@ Fit modes (crop or pad)
 To play the same picture again with a different scramble use the *New Shuffle* function.
 * **Unit tests** that test orientation maths, scramble rules, hints, solve and image loading.
 
-## Known limitation
+ Known limitation
 
 Tiles that are a single flat colour (for example the bars added in Pad mode) look the same
 During all orientations, so they can be able to turn their heads to the right without a tick. The Hint button will indicate these.
